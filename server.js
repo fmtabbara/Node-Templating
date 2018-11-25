@@ -51,6 +51,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    templateText: 'This is some template text about the projects page'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.status(400).send({
     error: 'Error handling request',
